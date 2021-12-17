@@ -1,0 +1,18 @@
+﻿@model FilmsViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Top Films</h1>
+   
+    <ul>
+        @foreach( var film in Model.films)
+        {
+        <li>
+            @Html.Partial("partialView", film)
+        </li>
+        }
+
+    </ul>
+</div>
